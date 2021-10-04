@@ -582,8 +582,8 @@ en:
       volume: Volume
       super8-film: Super 8 Film
       1_inch_video_reels: 1 Inch Video Reels
-      16mm_film_reels: 16mm film reels
-      35mm_film_reels: 35mm film reels
+      16mm_film_reels: 16mm Film Reels
+      35mm_film_reels: 35mm Film Reels
       Betacam_SP: Betacam SP
       Digital_Betacam: Digital Betacam
       8mm_Film_Reels: 8mm Film Reels
@@ -596,34 +596,33 @@ en:
       1_Inch_Sound_Tape_Reels: 1 Inch Sound Tape Reels
       1/4_Inch_Sound_Tape_Reels: 1/4 Inch Sound Tape Reels
       vhs: VHS
-      1/2_inch_Videoreel: 1/2 inch Videoreel
-      2_Inch_Videoreel: 2 Inch Videoreel
-      1/4_Audio_Reel: 1/4 Inch Audio Reel
-      1/2_Audio_Reel: 1/2 Inch Audio Reel
-      1_Inch_Audio_Reel: 1 Inch Audio Reel
+      1/2_inch_Videoreel: 1/2 Inch Video Reels
+      2_Inch_Videoreel: 2 Inch Video Reels
+      1/4_Audio_Reel: 1/4 Inch Audio Reels
+      1/2_Audio_Reel: 1/2 Inch Audio Reels
+      1_Inch_Audio_Reel: 1 Inch Audio Reels
       album: Album
       audiocassette: Audiocassette
       binder: Binder
       case: Case
       cd: CD
-      E-records: Electronic records
+      E-records: Electronic Records
       file: File
       flat-file: Flat File
       Flat-File-Folder: Flat File Folder
       negative: Negative
-      negative-box: Negative box
+      negative-box: Negative Box
       object: Object
       Photo-Album: Photo Album
       photograph: Photograph
       records-box: Records Box
       reel: Reel
       Reel_Frame: Reel Frame
-      roll-storage: Rolled storage
+      roll-storage: Rolled Storage
       scrapbook: Scrapbook
       shoot: Shoot
-      shoot-negative: Shoot negative
+      shoot-negative: Shoot Negative
       vhs/s-vhs: S-VHS
-      volume: Volume
     file_version_use_statement:
       audio-clip: Audio-Clip
       audio-master: Audio-Master
