@@ -531,6 +531,10 @@ en:
       moving_images: Moving Images
       realia: Realia
       text: Text
+      film: Film
+      negatives: Negatives
+      electronic records: Electronic Records
+      video: Video
     accession_acquisition_type:
       deposit: Deposit
       gift: Gift
