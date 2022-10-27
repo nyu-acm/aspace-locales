@@ -1602,6 +1602,12 @@ en:
     resource_type_tooltip: |
         <p>A list of terms used by a repository for categorizing its resources into basic types.</p>
         <p>Values in this Controlled Value List may be modified.</p>
+    language: Language of Description
+    language_tooltip: |
+        <p>Indicates all the languages present in the record generated from the accession description.</p>
+    script: Script of Description
+    script_tooltip: |
+        <p>Indicates all the scripts present in the record generated from the accession description.</p>
     access_restrictions: Access Restrictions?
     access_restrictions_tooltip: |
         <p>A checkbox for indicating access to the materials is restricted.</p>
@@ -2483,6 +2489,10 @@ en:
     import_type_ead_xml: EAD
     import_type_assessment_csv: Assessment CSV
     import_type_accession_csv: Accession CSV
+    bulk_import_csv: Bulk Import AO CSV
+    bulk_import_xlsx: Bulk Import AO XLSX
+    bulk_import_DO_csv: Bulk Import DO CSV
+    bulk_import_DO_xlsx: Bulk Import DO XLSX
     import_type_digital_object_csv: Digital Object CSV
     import_type_eac_xml: EAC-CPF
     import_type_location_csv: Location CSV
@@ -2750,6 +2760,10 @@ en:
     _singular: Custom Report Template
     _plural: Custom Report Templates
 
+  bulk_import_template:
+    _singular: Bulk Import Template
+    _plural: Bulk Import Templates
+  
   repository_oai:
     oai_is_disabled_tooltip: OAI is disabled tooltip
     oai_sets_available_tooltip: OAI sets available tooltip
