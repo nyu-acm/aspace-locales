@@ -2035,6 +2035,7 @@ en:
       aat: "Art & Architecture Thesaurus"
       cash: Canadian Subject Headings
       gmgpc: "TGM II, Genre and physical characteristic terms"
+      homoit: Homosaurus
       ingest: Unspecified ingested source
       lcgft: Library of Congress Genre/Form Terms
       lcsh: Library of Congress Subject Headings
@@ -2046,6 +2047,8 @@ en:
       rbgenr: "Genre Terms: A Thesaurus for Use in Rare Book and Special Collections Cataloguing"
       rvm: Répertoire de vedettes-matière
       tgn: Getty Thesaurus of Geographic Names
+      unescot: UNESCO Thesaurus
+      wikidata: Wikidata
     subject_term_type:
       cultural_context: Cultural context
       function: Function
