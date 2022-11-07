@@ -79,6 +79,8 @@ en:
         <p>Links to information in other description or management systems, such as donor files, processing plans, etc.</p>
     rights_statements_tooltip: |
         <p>Information about the rights status of the materials described and whether there are specific restrictions or permissions that have been indicated.</p>
+    metadata_rights_declarations_tooltip: |
+        <p>Based on DACS 8.2 and 13.11</p>
     instances_tooltip: |
         <p>Links description to information about physical or digital instantiations of material.</p>
     deaccessions_tooltip: |
@@ -91,8 +93,7 @@ en:
         <p>User defined fields for recording additional information not captured in other sections of the application.</p>
 
   digital_object: &digital_object_attributes
-    <<: *section_tooltips
-    <<: *slug_attributes
+    <<: [*section_tooltips, *slug_attributes]
     user_defined:
       <<: *user_defined_attributes
     title: Title
@@ -131,7 +132,6 @@ en:
 
   digital_object_component:
     <<: *digital_object_attributes
-    <<: *slug_attributes
     label: Label
     label_tooltip: |
         <p>A term used to describe the part and its position within the Digital Object being described. More often used for the component parts of the Digital Object than the top-level Digital Object record.</p>
@@ -229,7 +229,7 @@ en:
     _frontend:
       action:
         add: Add Function
-        
+
   dates_of_existence:
     _frontend:
       action:
@@ -525,7 +525,7 @@ en:
         <p>Indicates the language used in recording the name form. Example: Russian (for Каспаров, Г. К. (Гарри Кимович))</p>
     script: Script
     script_tooltip: |
-        <p>Indicates the script used in recording the name form. Example: Cyrillic (for Каспаров, Г. К. (Гарри Кимович))</p> 
+        <p>Indicates the script used in recording the name form. Example: Cyrillic (for Каспаров, Г. К. (Гарри Кимович))</p>
     transliteration: Transliteration
     transliteration_tooltip: |
         <p>Indicates the transliteration scheme used in recording the name form.</p>
@@ -607,17 +607,17 @@ en:
         <li>Adobe <em>(for Adobe Photoshop CS3)</em></li>
         <li>Library of Congress <em>(for Library of Congress Bagger 2.1.2)</em></li>
         </ul>
-        
+
   parallel_name_software:
     <<: *agent_software_attributes
 
   agent_record_identifiers:
     identifier_type_tooltip: |
         <p>Indicates the type or format of the authority record identifier. Values in this Controlled Value List may be modified.</p>
-    source_tooltip: | 
+    source_tooltip: |
         <p>Indicates the originating authority file of an associated identifier. Example: NAF (for nr2003017069). Values in this Controlled Value List may be modified.</p>
     record_identifier_tooltip: |
-        <p>The identifier for the Agent record, usually consisting of a unique alpha-numeric string. Identifier may originate in an external authority file, or be generated locally.</p> 
+        <p>The identifier for the Agent record, usually consisting of a unique alpha-numeric string. Identifier may originate in an external authority file, or be generated locally.</p>
     is_primary: Primary
 
   agent_record_control:
@@ -653,7 +653,7 @@ en:
         <p>The content of the note, providing details about the language and scripts used in the preparation of the Agent description.</p>
 
   agent_alternate_set:
-    set_component_tooltip: | 
+    set_component_tooltip: |
         <p>A caption to provide identification and access to an equivalent linked authority record.</p>
     descriptive_note_tooltip: |
         <p>The content of the note, providing details about the linked authority record.</p>
@@ -744,7 +744,7 @@ en:
     language_tooltip: |
         <p>The language(s) associated with the agent. Example: English.</p>
     script_tooltip: |
-        <p>The text script associated with the agent. Example: Latin.</p>    
+        <p>The text script associated with the agent. Example: Latin.</p>
 
   agent_gender:
     gender_tooltip: |
@@ -752,7 +752,7 @@ en:
 
   agent_place:
     place_role_tooltip: |
-        <p>Indicates the relationship of the geographic location to the agent.</p> 
+        <p>Indicates the relationship of the geographic location to the agent.</p>
 
   agent_resource:
     linked_agent_role_tooltip: |
@@ -772,7 +772,7 @@ en:
     xlink_role_attribute_tooltip: |
         <p>Type or nature of the remote resource linked in the associated URI.</p>
     xlink_arcrole_attribute_tooltip: |
-        <p>Type or nature of the remote resource linked in the associated URI.</p>   
+        <p>Type or nature of the remote resource linked in the associated URI.</p>
     last_verified_date_tooltip: |
         <p>Last date or date and time the linked resource linked in the associated URI was verified.</p>
 
@@ -824,14 +824,11 @@ en:
     date_calendar_tooltip: |
         <p>System of reckoning time, such as the Gregorian calendar or Julian calendar. The value "gregorian" is the default.</p>
 
-  structured_date_label_existence: 
-    <<: *sdl_attributes  
+  structured_date_label_existence:
+    <<: *sdl_attributes
 
-  date_fields: 
-    <<: *sdl_attributes  
-
-  structured_date_label_common_fields: 
-    <<: *sdl_attributes  
+  structured_date_label_common_fields:
+    <<: *sdl_attributes
 
   structured_date_single: &sds_attributes
     date_role_tooltip: |
@@ -866,15 +863,16 @@ en:
         <p>Used to indicate whether the ending standardized date reflects the actual date or an estimate of the earliest or latest something could have occurred.</p>
 
   structured_date_single_fields:
-    <<: *sds_attributes  
+    <<: *sds_attributes
 
   structured_date_range_fields:
-    <<: *sdr_attributes  
+    <<: *sdr_attributes
 
   agent_contact: &agent_contact
     name: Contact Name
     name_tooltip: |
         <p>Name of the person serving as contact for the entity in the main record.</p>
+        <p>For repository corporate entity agents, a name will be auto-generated by the application when blank.</p>
     salutation: Salutation
     salutation_tooltip: |
         <p>Salutation for the contact person.</p>
@@ -918,13 +916,6 @@ en:
     _singular: Contact
     _plural: Contact Details
 
-  note_contact_note:
-    contact_notes_tooltip: |
-        <p>Details about the interaction with the contact</p>
-
-    date_of_contact_tooltip: |
-        <p>Used to record the specific date or timeframe of an interaction</p>
-
   telephone: &telephone
     _plural: Telephone Numbers
     number_type: Number Type
@@ -936,8 +927,6 @@ en:
         <p>Telephone number extension for the contact person.</p>
     number_type_tooltip: |
         <p>Indicates the type of telephone number.</p>
-
-    
 
   telephone_required: &telephone
     _plural: Telephone Numbers
@@ -1008,7 +997,7 @@ en:
     _singular: Related Agent
     _plural: Related Agents
 
-  related_agents: 
+  related_agents:
     <<: *related_agent_attributes
 
   agent_relationship_parentchild:
@@ -1068,7 +1057,7 @@ en:
     note_mandate: Mandate
     note_contact_note: Contact Note
     note_legal_status: Legal Status
-    note_structure_or_genealogy: Structure Or Genealogy 
+    note_structure_or_genealogy: Structure Or Genealogy
     _singular: Note
     _plural: Notes
 
@@ -1170,6 +1159,10 @@ en:
     subnotes: Sub Notes
     date_of_contact: Date of Contact
     contact_notes: Contact Notes
+    contact_notes_tooltip: |
+      <p>Details about the interaction with the contact</p>
+    date_of_contact_tooltip: |
+      <p>Used to record the specific date or timeframe of an interaction</p>
 
   note_legal_status:
     <<: *note_attributes
@@ -1320,6 +1313,10 @@ en:
     _singular: Extent
 
   lang_material: &lang_material_attributes
+    _plural: Languages
+    _singular: Language
+
+  language:
     _plural: Languages
     _singular: Language
 
@@ -1517,11 +1514,10 @@ en:
     <<: *date_attributes
 
   date_fields:
-    <<: *date_attributes
+    <<: [*date_attributes, *sdl_attributes]
 
   accession:
-    <<: *section_tooltips
-    <<: *slug_attributes
+    <<: [*section_tooltips, *slug_attributes]
     user_defined:
       <<: *user_defined_attributes
     accession_date: Accession Date
@@ -1657,6 +1653,10 @@ en:
         <p>Used for linking associated Resources with this Accession.</p>
     relator: Relator
     relator_type: Relator Type
+    created_by: Created by
+    last_modified_by: Last modified by
+    create_time: Created
+    user_mtime: Modified
     _singular: Accession
     _plural: Accessions
 
@@ -1691,6 +1691,9 @@ en:
       agent_person: Person
       agent_corporate_entity: Corporate Entity
       agent_software: Software
+    is_user: Username
+    is_user_tooltip: |
+        <p>If present, this agent record is linked to an application user with the given username.</p>
     name: Agent Name
     names: Name Forms
     names_tooltip: |
@@ -1737,34 +1740,28 @@ en:
     agent_contacts_tooltip: |
         <p>Contact information for the agent or a representative working on the behalf.</p>
     used_languages_tooltip: "The language(s) associated with the agent. Example: English."
-    related_agents_tooltip: Other agents associated with the agent.
     agent_resources_tooltip: Resources and other records associated with the agent.
     related_agent_tooltip: Used to link other agents with a relationship to the agent and indicate the nature of the relationship.
     publish_tooltip: |
       <p>Indicates whether or not the agent is included in exports and published to the public interface (if used)</p>
 
-
   agent_person:
     <<: *agent_attributes
-    <<: *slug_attributes
     _singular: Person
     _plural: People
 
   agent_family:
     <<: *agent_attributes
-    <<: *slug_attributes
     _singular: Family
     _plural: Families
 
   agent_software:
     <<: *agent_attributes
-    <<: *slug_attributes
     _singular: Software
     _plural: Software
 
   agent_corporate_entity:
     <<: *agent_attributes
-    <<: *slug_attributes
     _singular: Corporate Entity
     _plural: Corporate Entities
 
@@ -1778,8 +1775,7 @@ en:
     related_agents: Related Agents
 
   archival_object: &archival_object_attributes
-    <<: *section_tooltips
-    <<: *slug_attributes
+    <<: [*section_tooltips, *slug_attributes]
     title: Title
     title_tooltip: |
         <p>CONDITIONALLY REQUIRED FIELD: The title assigned to the materials described. An Archival Object must have either a Title or a Date subrecord.</p>
@@ -1901,13 +1897,12 @@ en:
       delete_assessment_record: delete assessment records
       manage_assessment_attributes: create/update/delete repository assessment attributes definitions
       manage_enumeration_record: create/update/delete controlled value records
+      manage_custom_report_templates: manage custom report templates
     _singular: Group
     _plural: Groups
 
   resource:
-    <<: *archival_object_attributes
-    <<: *section_tooltips
-    <<: *slug_attributes
+    <<: [*archival_object_attributes, *section_tooltips]
     user_defined:
       <<: *user_defined_attributes
     id_0: Identifier
@@ -1996,7 +1991,7 @@ en:
     finding_aid_language: Language of Description
     finding_aid_language_tooltip: |
         <p>Indicates all the languages present in the finding aid generated from the resource description.</p>
-    finding_aid_langusage_label: "Description is written in: " 
+    finding_aid_langusage_label: "Description is written in: "
     finding_aid_script: Script of Description
     finding_aid_script_tooltip: |
         <p>Indicates all the scripts present in the finding aid generated from the resource description.</p>
@@ -2018,8 +2013,16 @@ en:
     finding_aid_note: Finding Aid Note
     finding_aid_note_tooltip: |
         <p>For recording any additional information about the finding aid (not the described Resource) not covered by the other finding aid data elements.</p>
+    created_by: Created by
+    last_modified_by: Last modified by
+    create_time: Created
+    user_mtime: Modified
     _singular: Resource
     _plural: Resources
+
+  resource_and_archival_object:
+    _singular: Resource and/or Archival Object
+    _plural: Resources and/or Archival Objects
 
   related_accession:
     _singular: Related Accession
@@ -2063,6 +2066,8 @@ en:
         <li>Mandeville Special Collections Library</li>
         <li>Tamiment Library and Robert F. Wagner Labor Archives</li>
         </ul>
+    ark_shoulder: ARK Shoulder (local namespace)
+    ark_shoulder_tooltip: Per-repository string to be included in generated ARKs
     org_code: Organization / Agency Code
     org_code_tooltip: |
         <p>A code compliant with ISO/DIS 15511 Information and Documentation International Standard Identifier for Libraries and Related Organizations (ISIL). For United States institutions, this includes codes from the MARC Organization Code list.</p>
@@ -2192,6 +2197,9 @@ en:
     is_admin: Grant system administrator permissions
     is_admin_tooltip: |
         <p>Used to indicate whether the user should have full administrative privileges to the application.</p>
+    create_time: Created
+    user_mtime: Updated
+    admin: Administrator
     _singular: User
     _plural: Users
 
@@ -2314,8 +2322,10 @@ en:
   defaults: &defaults_attributes
     general_section: General Settings
     show_suppressed: Show Suppressed?
+    include_unpublished: Include Unpublished Records in Exports?
     show_suppressed_tooltip: Whether to show suppressed records that you have permission to see when browsing.
     publish: Publish?
+    rde_sort_alpha: Display RDE Templates Alphabetically?
     publish_tooltip: Whether to publish new records by default.
     default_values: Pre-populate Records?
     default_values_tooltip: Whether to pre-populate new Accession and Resource records with default values.
@@ -2370,7 +2380,6 @@ en:
     agent_must_be_unique: Agent records cannot be identical
     subject_must_be_unique: Subject records cannot be identical
     subject_heading_identifier_must_be_unique_within_source: Subject heading identifier must be unique within source
-    conflicting_record: Conflicting record
     missing_required_property: Property is required but was missing
     missing_property: Property was missing
     not_a_valid_date: Not a valid date
@@ -2380,7 +2389,7 @@ en:
     is_required_unless_an_expression_or_an_end_date_is_given: is required unless an expression or an end date is given
     is_required_unless_an_expression_or_a_begin_date_is_given: is required unless an expression or a begin date is given
     must_specify_either_a_date_or_a_timestamp: must specify either a date or a timestamp
-    did_not_match_regular_expression: Did not match regular expression %{regexp}
+    did_not_match_regular_expression: Did not match expected pattern %{regexp}
     too_few_characters: Must be at least %{min_length} characters
     too_many_characters: Must be %{max_length} characters or fewer
     max_length_is_50_characters: Must not exceed 50 characters
@@ -2423,23 +2432,26 @@ en:
     short_name_already_in_use: The repository short name must be unique within this ArchivesSpace
     custom_report_template_name_not_unique: The custom report template's name must be unique.
     custom_report_must_include_field_or_subreport: The custom report template must include at least one field or subreport.
-    missing_filter_values: Selected to filter results by field but no value(s) given
+    missing_end_filter_date: Start and end dates are required to filter by date. Please provide an end date.
+    missing_start_filter_date: Start and end dates are required to filter by date. Please provide a start date.
     must_be_a_valid_email_address: Email address field must contain a valid address
     repo_set_desc_required: Repository set description is required for creating an OAI repository set
     repo_set_name_required: Repository set name is required for creating an OAI repository set
     is_not_present: Required field missing
-    must_be_a_valid_email_address: Must contain a valid address
     sponsor_set_desc_required: Sponsor set description is required for creating an OAI sponsor set
     sponsor_set_name_required: Sponsor set name is required for creating an OAI sponsor set
     invalid_characters: Contains invalid characters
     conflicting_record: "<a href='/resolve/readonly?uri=%{record_uri}' target='_blank'>View conflicting record</a>"
     or_date_expression_is_required: Dates must specify at least one date expression
     must_specify_either_a_single_or_ranged_date: Dates must be specified as either Single or Ranged
-    must_be_in_yyyy[yyy][yy][y]__yyyy[yyy][yy][y]-mm__or_yyyy-mm-dd_format : Standardized dates must be in a standardized format
+    must_be_in_yyyy[yyy][yy][y]__yyyy[yyy][yy][y]-mm__or_yyyy-mm-dd_format: Standardized dates must be in a standardized format
     generic_validation_error: Validation Error
     requires_that_end_dates_are_after_begin_dates: End Dates must be after Begin Dates
     must_specify_a_primary_subject: "Description Information: Record is missing a primary subject"
     subrecord_not_allowed_for_agent_software: "Software Agents cannot have record control or relation subrecords"
+    ark_collision: There was a problem while generating an ARK for this record. Please contact your system administrator.
+    external_ark_collision: External ARK already in use
+    ark_format_error: One of the ARKs provided was not a valid ARK.
 
   job:
     _singular: Background Job
@@ -2467,7 +2479,6 @@ en:
     time_submitted: Time Submitted
     time_started: Time Started
     time_finished: Time Completed
-    time_submitted: Time Submitted
     owner: Owner
     show_description: Show Description
     input_file: Input File
@@ -2514,7 +2525,7 @@ en:
   print_to_pdf_job:
     include_unpublished: Include Unpublished
     source: Source
-  
+
   top_container_linker_job:
     _singular: Top Container Linker Job
     filename: File
@@ -2749,21 +2760,22 @@ en:
     description: Description
     record_type: Record Type
     display: Display?
-    narrow_by: Narrow By?
-    values: Values
-    value: Value
+    limit: Limit
+    values: Narrow by Values
+    value: Narrow by Value
     "true": "Yes"
     "false": "No"
-    start_date: Start Date
-    end_date: End Date
+    start_date: Narrow by Start Date
+    end_date: Narrow by End Date
     field: Field
+    include: Include
     _singular: Custom Report Template
     _plural: Custom Report Templates
 
   bulk_import_template:
     _singular: Bulk Import Template
     _plural: Bulk Import Templates
-  
+
   repository_oai:
     oai_is_disabled_tooltip: OAI is disabled tooltip
     oai_sets_available_tooltip: OAI sets available tooltip
@@ -2780,6 +2792,7 @@ en:
     sponsor_set_description_tooltip: Sponsor set description tooltip
 
   bulk_import:
+    templates: Bulk Import Templates
     row: "Row %{row}"
     processing_row: "Processing row %{row}"
     dig_assoc: Digital object added to archival object
@@ -2788,7 +2801,7 @@ en:
     could_be: "%{what} would be created"
     updated: "%{what}: %{id}"
     clip_btn: Copy to Clipboard
-    clip_created:  "\t%{what} created: \t%{nm}\t%{id}\t%{ref_id}"
+    clip_created: "\t%{what} created: \t%{nm}\t%{id}\t%{ref_id}"
     clip_what: "\t%{what} : \t%{nm}\t%{id}\t%{ref_id}"
     clip_info: "\t\t\t\t\t%{what}\n"
     clip_err: "\t\t\t\t\tERROR: %{err}\n"
@@ -2841,20 +2854,20 @@ en:
       res_ead: This form's resource is missing an EAD ID
       row_ead: This row is missing an EAD ID
       row_missing_ead_uri: This row is missing BOTH an EAD ID and URI
-      ead_mismatch:  "Form's EAD ID [%{res_ead}] does not match row's EAD ID [%{row_ead}]"
+      ead_mismatch: "Form's EAD ID [%{res_ead}] does not match row's EAD ID [%{row_ead}]"
       uri_mismatch: "Input resource's URI [%{res_uri}] does not match row's URI [%{row_uri}]"
       title: Missing title
       title_and_date: Missing Title AND Valid Date definition
       hier_miss: Missing hierachy -- must be a number greater than 0
       hier_zero: Hierarchy must be greater than 0
       hier_wrong: Hierarchy cannot not be more than one level deeper than the previous row
-      hier_wrong_resource:  Did you mean to start processing with an archival object selected?
-      hier_wrong_resource_validation:  "WARNING: nothing below this row would have been processed"
+      hier_wrong_resource: Did you mean to start processing with an archival object selected?
+      hier_wrong_resource_validation: "WARNING: nothing below this row would have been processed"
       hier_below_error_level: The parent archival object was not created
       level: Missing valid Description Level
       date: "Date must have at least one of: Date Begin; Date End; or Date Expression"
       number: Missing Extent Number
-      extent_type:  Missing Extent Type
+      extent_type: Missing Extent Type
       extent_validation: "Unable to validate Extent (%{ext}): %{msg}"
       no_header: No header (field codes) row found; are you using the correct template?
       no_data: No processible data rows found!
@@ -2925,3 +2938,69 @@ en:
     log_skipping_due_to_errors: "Skipping creation and linking of top containers due to errors."
     log_validating: "Validating spreadsheet data..."
     log_creating_and_linking: "Creating and linking top containers..."
+
+  metadata_rights_declaration:
+    license_tooltip: |
+        <p>Name of the license (if any) that governs the conditions under which the metadata is available for use and reuse.  Examples:</p>
+        <p>This record is made available under an Universal 1.0 Public Domain Dedication Creative Commons license.</p>
+        <p>This record is made available under an Attribution-NonCommercial 4.0 International Creative Commons license.</p>
+        <p>This record is made available under an Attribution-NonCommercial-NoDerivatives 4.0 International Creative Commons license.</p>
+        <p>This record is made available under an Attribution-NoDerivatives 4.0 International Creative Commons license.</p>
+        <p>This record is made available under an Attribution-NonCommercial-ShareAlike 4.0 International Creative Commons license.</p>
+    descriptive_note_tooltip: |
+        <p>Unstructured information about the conditions under which the metadata is available for use and reuse.  Examples:</p>
+        <p>i. Copyright Smith College, 1985</p>
+        <p>ii. This finding aid may be reproduced for any purpose.</p>
+        <p>iii. This work has been dedicated to the public domain, meaning that you can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.</p>
+        <p>iv. The biographical note is copyright Ted Smith, 2015.  All other metadata is licensed under CC BY 4.0.</p>
+    file_uri_tooltip: |
+        <p>A URI for the online location of the license or other published infomation about the conditions under which the metadata is available for use and reuse. Example: https://creativecommons.org/licenses/by/4.0/</p>
+    file_version_xlink_actuate_attribute_tooltip: |
+        <p>Indicates whether associated URI should be resolved when the Agent record is rendered.</p>
+    file_version_xlink_show_attribute_tooltip: |
+        <p>Indicates where the remote resource linked in the associated URI should be rendered.</p>
+    xlink_title_attribute_tooltip: |
+        <p>Title of the remote resources linked in the associated URI, which may be used as a caption.</p>
+    xlink_role_attribute_tooltip: |
+        <p>Type or nature of the remote resource linked in the associated URI.</p>
+    xlink_arcrole_attribute_tooltip: |
+        <p>Type or nature of the remote resource linked in the associated URI.</p>
+    last_verified_date_tooltip: |
+        <p>Last date or date and time the linked resource linked in the associated URI was verified.</p>
+
+  ratings:
+    _plural: Ratings
+  conservation_issues:
+    _plural: Conservation Issues
+  surveyed_by:
+    _plural: Surveyed By
+  reviewer:
+    _plural: Reviewers
+  formats:
+    _plural: Formats
+  creator:
+    _plural: Creators
+  owner_repo:
+    _plural: Reserved For
+  groups:
+    _plural: Groups
+  created_by: Created by
+  last_modified_by: Last modified by
+  create_time: Created
+  user_mtime: Modified
+
+  arks:
+    ark: ARK
+    edit: Edit ARKs
+    current: current
+    remove_ark: Remove
+    add_new: Add new ARK
+    set_current: Set to current
+    save: Save ARKs
+    no_changes: No changes to save
+    modal_title: Edit ARKs for current record
+    unsubmitted_input: You have unsubmitted input
+    only_current_ark_can_be_external: The current ARK cannot be replaced while it is marked as external.
+    ark_editor_errors:
+      ark_collision: One of the ARKs provided is already in use.
+      ark_format_error: One of the ARKs provided was not a valid ARK.
