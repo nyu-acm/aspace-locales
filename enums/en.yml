@@ -188,15 +188,56 @@ en:
       current: Current
       previous: Previous
     container_type:
+      1_Inch_Audio_Reel: 1 Inch Audio Reels
+      1_Inch_Sound_Tape_Reels: 1 Inch Sound Tape Reels
+      1_Inch_Video_Reel: 1 Inch Video Reel
+      1_inch_video_reels: 1 Inch Video Reels
+      16mm_film_reels: 16mm Film Reels
+      2_Inch_Videoreel: 2 Inch Video Reels
+      35mm_film_reels: 35mm Film Reels
+      8mm_Film_Reels: 8mm Film Reels
+      album: Album
+      audiocassette: Audiocassette
+      Betacam_SP: Betacam SP
+      binder: Binder
       box: Box
       carton: Carton
       case: Case
-      container: Container
+      cd: CD
+      Digital_Betacam: Digital Betacam
+      E-records: Electronic Records
+      file: File
+      Film_Canister: Film Canister
+      Flat-File-Folder: Flat File Folder
+      flat-file: Flat File
       folder: Folder
       frame: Frame
+      Half_Inch_Audio_Reel: Half Inch Audio Reels
+      Half_Inch_Video_Reel: Half Inch Video Reels
+      negative-box: Negative Box
+      negative: Negative
       object: Object
       page: Page
+      Photo-Album: Photo Album
+      photograph: Photograph
+      Quarter_Inch_Audio_Reel: Quarter Inch Audio Reels
+      Quarter_Inch_Sound_Tape_Reels: Quarter Inch Sound Tape Reels
+      records-box: Records Box
+      Reel_Frame: Reel Frame
       reel: Reel
+      roll-storage: Rolled Storage
+      s-vhs: S-VHS
+      scrapbook: Scrapbook
+      shoot-negative: Shoot Negative
+      shoot: Shoot
+      Sound_Disc--Laquer: Sound Disc--Laquer
+      Sound_Disc--Shellac: Sound Disc--Shellac
+      Sound_Disc--Vinyl: Sound Disc--Vinyl
+      Sound_Disc-CD: Sound Disc--CD
+      Sound_Disc-MiniDisc: Sound Disc--MiniDisc
+      Super_8mm_Film_Reel: Super 8mm Film Reel
+      super8-film: Super 8 Film
+      vhs: VHS
       volume: Volume
     country_iso_3166:
       AD: Andorra
