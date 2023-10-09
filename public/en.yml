@@ -41,6 +41,7 @@ en:
     cite: Citation
     cite_item: Cite Item
     cite_item_description: Cite Item Description
+    digitized: View Digital Material
     request: Request
     print: Print
     print-generating: Generating
@@ -53,6 +54,8 @@ en:
     search_add_row: Add a search row
     search_remove_row: Remove the row below
     staff_link: Staff Only
+    next: Next
+    previous: Previous
 
   page_actions: Page Actions
 
@@ -162,6 +165,8 @@ en:
       published_series_title_u_sstr: Series
       instance_type_enum_s: Instance type
       langcode: Language
+      digital_object_type_enum_s: Type
+      extent_type_enum_s: Extent
 
   search_sorting:
     sort_by: "Sort by:"
@@ -197,6 +202,7 @@ en:
     backend_down_message: ArchivesSpace is currently experiencing technical difficulties. We
       apologise for the inconvenience. Please try again later.
     unexpected_error: Your request could not be completed due to an unexpected error
+    invalid_search_params: "Invalid search parameter '%{value}' for field '%{field}'"
 
   boolean:
     "true": "Yes"
@@ -206,6 +212,10 @@ en:
     search_placeholder: Enter your search terms
     error_no_term: No search term(s) entered.
     toggle_navigation: Toggle Navigation
+
+  navigation:
+    hierarchical: hierarchical navigation
+    top_level: top-level navigation
 
   internal_links:
     main: Main Content
@@ -279,6 +289,7 @@ en:
         accessions: Related Unprocessed Material
         deaccessions: Deaccessioned Material
         forms_part_of: Part Relationship
+        has_part: Part Relationship
         sibling_of: Sibling Relationship
 
   archival_object:
@@ -331,6 +342,7 @@ en:
   top_container:
     _singular: Container
     _plural: Containers
+    restricted: Restricted
 
   digital_object:
     _singular: Digital Record
@@ -339,7 +351,11 @@ en:
       thumbnail: thumbnail
       link: Link to digital object
       badge_label: Digital %{level}
-
+      go: Go to file
+      additional: Additional File Versions
+      url_encoded_data: URL-encoded data
+      browse_number_digital_objects_in_collection: Browse %{num} digital objects in collection
+      
   subject:
     _singular: Subject
     _plural: Subjects
@@ -527,3 +543,16 @@ en:
     file_version_xlink_actuate_attribute: Xlink Actuate Attribute
     file_version_xlink_show_attribute: Xlink Show Attribute
     last_verified_date: Last Verified Date
+
+  footer:
+    staff_interface: <a href="%{staff_url}">Staff Interface</a>
+    archivesspace_home: Visit <a href='http://archivesspace.org'>ArchivesSpace.org</a>
+    feedback: <a id='aspaceFeedbackLink' href='%{feedback_url}' target='_blank'>Send Feedback or Report a Problem</a>
+
+  languages:
+    select: Select Language
+    en: English
+    es: Spanish
+    fr: French
+    de: German
+    ja: Japanese

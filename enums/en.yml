@@ -1511,6 +1511,7 @@ en:
       cancelled_obsolete: Cancelled/Obsolete
       deleted: Deleted
       deleted_replaced: Deleted-Replaced
+      deleted_merged: Deleted-Merged
       deleted_split: Deleted-Split
       derived: Derived
       new: New
@@ -1817,8 +1818,7 @@ en:
       other: Other
       statute: Statute
     romanization:
-      conv_rom_cat_agency: Conventional romanization or conventional form of name in language of\
-        \ cataloging agency
+      conv_rom_cat_agency: Conventional romanization or conventional form of name in language of cataloging agency
       int_std: International standard
       local_standard: Local standard
       nat_std: National standard

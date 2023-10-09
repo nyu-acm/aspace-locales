@@ -14,7 +14,7 @@ de:
     cite_item: Element zitieren
     cite_item_description: Element-Beschreibung zitieren
     print: Drucken
-    print-generating: Erzeugen
+    print-generating: Erstellen
     collection_overview: Sammlungs-Übersicht
     hierarch: Gliederung der Sammlung
     numeric: Behältnis-Verzeichnis
@@ -30,6 +30,9 @@ de:
     refine_search: Suche verfeinern
     backup_abbr: Zurück gehen
     search_remove_row: Die Zeile unten entfernen
+    next: Nächste
+    previous: Vorherige
+    digitized: Digitale Inhalte ansehen
   request:
     required: erforderlich
     user_name: Ihr Name
@@ -116,6 +119,8 @@ de:
       langcode: Sprache
       type_enum_s: Typ
       published_series_title_u_sstr: Serie
+      digital_object_type_enum_s: Typ
+      extent_type_enum_s: Umfang
     creators_text_contain: der <strong>Urheber</strong> enthält <span class='searchterm'>%{kw}</span>
     fewer_facets: weniger
     op:
@@ -172,6 +177,9 @@ de:
     error_no_term: Kein(e) Suchbegriff(e) eingegeben.
     search_placeholder: Geben Sie Ihre Suchbegriffe ein
     toggle_navigation: Navigation umschalten
+  navigation:
+    hierarchical: hierarchische Navigation
+    top_level: oberste Navigationsebene
   advanced_search:
     operator_label: Verknüpfer
     operator:
@@ -212,6 +220,7 @@ de:
         deaccessions: Abgegangenes Archivgut
         forms_part_of: Teil-Verwandtschaft
         sibling_of: Geschwister-Verwandtschaft
+        has_part: Teil-Verwandtschaft
     _singular: Unbearbeitetes Archivgut
   repository:
     _plural: Aufbewahrungsorte
@@ -245,7 +254,7 @@ de:
         sponsor: Sponsor
         note: Anmerkung
         revision: Überarbeitungs-Bezeichnung
-        series_statement: Serien-Bezeichnung
+        series_statement: Erklärung zur Serie
         edition_statement: Ausgaben-Bezeichnung
       related_accessions:
         accessions: Eingangs-Aufzeichnung
@@ -280,17 +289,21 @@ de:
   more_about: Mehr über
   dig_cont_arr: Struktur des digitalen Objekts
   cont_arr: Sammlungs-Struktur
-  linked_instances: Verlinkte Aufzeichnungen
+  linked_instances: Verknüpfte Aufzeichnungen
   containers: Physische Aufbewahrungs-Information
   top_container:
     _plural: Behältnisse
     _singular: Behältnis
+    restricted: Eingeschränkt
   digital_object:
     _singular: Digitale Aufzeichnung
     _public:
       thumbnail: Vorschaubild
       link: Verweis zu digitalem Objekt
       badge_label: Digital %{level}
+      go: Gehen Sie zur Datei
+      additional: Weitere Dateiversionen
+      browse_number_digital_objects_in_collection: Durchsuchen Sie %{num} digitale Objekte der Sammlung
     _plural: Digitales Archivgut
   subject:
     _singular: Thema
@@ -412,8 +425,8 @@ de:
     note_citation: Zitierung
     _plural: Anmerkungen
   metadata_rights_declaration:
-    _plural: Rechte-Deklarationen von Metadaten
-    _singular: Rechte-Deklaration von Metadaten
+    _plural: Rechteerklärungen von Metadaten
+    _singular: Rechteerklärung von Metadaten
     license: Lizenz
     descriptive_note: Beschreibende Anmerkung
     file_uri: Datei-URI
@@ -431,8 +444,8 @@ de:
     usage: Verwendung
     existence: Existenz
   agent_corporate_entity:
-    _singular: Organisation
-    _plural: Organisationen
+    _singular: Körperschaft
+    _plural: Körperschaften
   fax: Fax
   skipnav:
     search: Zur Suche springen
@@ -447,3 +460,16 @@ de:
     _singular: Verwendete Sprache
   structured_date_label:
     date: Datum
+  footer:
+    staff_interface: <a href="%{staff_url}">Verwaltungsoberfläche</a>
+    archivesspace_home: Besuchen Sie <a href='http://archivesspace.org'>ArchivesSpace.org</a>
+    feedback: <a id='aspaceFeedbackLink' href='%{feedback_url}' target='_blank'>Rückmeldung geben oder
+      ein Problem melden</a>
+
+  languages:
+    select: Sprache auswählen
+    en: Englisch
+    es: Spanisch
+    fr: Französisch
+    de: Deutsch
+    ja: Japanisch

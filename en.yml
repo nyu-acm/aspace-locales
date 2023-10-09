@@ -129,6 +129,11 @@ en:
         <p>Links a digital object or digital object component to an associated content file, addressable by URI.</p>
     _singular: Digital Object
     _plural: Digital Objects
+    new_title: New Digital Object
+    linker:
+      browse: Browse Digital Objects
+      create: Create Digital Object
+      link_title: Link to digital object
 
   digital_object_component:
     <<: *digital_object_attributes
@@ -204,6 +209,11 @@ en:
     owner_repo_tooltip: A repository that has reserved this location
     _singular: Location
     _plural: Locations
+    new_title: New Location
+    linker:
+      browse: Browse Locations
+      create: Create Location
+      link_title: Link to location
 
   location_batch:
     <<: *location_attributes
@@ -261,6 +271,10 @@ en:
     ref_plural: Records
     _singular: Record Link
     _plural: Record Links
+    linker_ref:
+      browse: Browse Records
+      create: Create Record
+      link_title: Link to record
 
   linked_agent: &linked_agent_attributes
     role: Role
@@ -371,6 +385,7 @@ en:
       virus_check: Virus Check
     _singular: Event
     _plural: Events
+    new_title: New Event
 
   linked_event:
     <<: *event
@@ -1659,6 +1674,11 @@ en:
     user_mtime: Modified
     _singular: Accession
     _plural: Accessions
+    new_title: New Accession
+    linker:
+      browse: Browse Accessions
+      create: Create Accession
+      link_title: Link to accession
 
   interrelated_accession:
     _plural: Related Accessions
@@ -1716,6 +1736,11 @@ en:
     publish: Publish
     _singular: Agent
     _plural: Agents
+    new_title:
+      agent_family: New Family
+      agent_person: New Person
+      agent_corporate_entity: New Corporate Entity
+      agent_software: New Software
     agent_record_controls_tooltip: |
         <p>Information about the record describing the Agent.</p>
     agent_alternate_sets_tooltip: |
@@ -1744,6 +1769,10 @@ en:
     related_agent_tooltip: Used to link other agents with a relationship to the agent and indicate the nature of the relationship.
     publish_tooltip: |
       <p>Indicates whether or not the agent is included in exports and published to the public interface (if used)</p>
+    linker:
+      create: Create Agent
+      browse: Browse Agents
+      link_title: Link to agent
 
   agent_person:
     <<: *agent_attributes
@@ -1858,6 +1887,13 @@ en:
     member_usernames_tooltip: |
         <p>The members that are part of this group.</p>
     permissions: "Members can:"
+    default_group_names:
+      repository_managers: "Managers of the %{repo_code} repository"
+      repository_archivists: "Archivists of the %{repo_code} repository"
+      project_managers: "Project managers of the %{repo_code} repository"
+      advanced_data_entry: "Advanced Data Entry users of the %{repo_code} repository"
+      basic_data_entry: "Basic Data Entry users of the %{repo_code} repository"
+      repository_viewers: "Viewers of the %{repo_code} repository"
     permission_types:
       manage_repository: manage this repository (change groups and other settings)
       update_location_record: create/modify/delete location records in this repository
@@ -2019,6 +2055,7 @@ en:
     user_mtime: Modified
     _singular: Resource
     _plural: Resources
+    new_title: New Resource
 
   resource_and_archival_object:
     _singular: Resource and/or Archival Object
@@ -2112,10 +2149,15 @@ en:
         <p>A remote URL or path to a local file that contains a branding image (like a logo or seal) to be used in the repository's online finding aids. This image appears on the public side PDFs, staff side PDFs and on the repositories page.</p>
     _singular: Repository
     _plural: Repositories
+    new_title: New Repository
     publish: Publish?
     publish_tooltip: |
         <p>Determines whether this Repository and any record it contains will be published to public (patron) interfaces.</p>
-
+    linker:
+      browse: Browse Repositories
+      create: Create Repository
+      link_title: Link to repository
+    position: Position
 
   term: &term_attributes
     # tooltips not displaying
@@ -2159,6 +2201,11 @@ en:
     heading: Subject Heading
     _singular: Subject
     _plural: Subjects
+    new_title: New Subject
+    linker:
+      browse: Browse Subjects
+      create: Create Subject
+      link_title: Link to subject
 
   user:
     username: Username
@@ -2286,16 +2333,22 @@ en:
     merge_into: Merge Into
     _singular: Controlled Value List
     _plural: Controlled Value lists
+    default: Default
 
   classification:
     <<: *slug_attributes
     _singular: Classification
     _plural: Classifications
+    new_title: New Classification
     identifier: Identifier
     title: Title
     description: Description
     creator: Creator
     id_separator: /
+    linker:
+      browse: Browse Classifications
+      create: Create Classification
+      link_title: Link to classification
 
   classification_term:
     <<: *slug_attributes
@@ -2305,13 +2358,17 @@ en:
     title: Title
     description: Description
     creator: Creator
+    linker:
+      browse: Browse Classification Terms
+      create: Create Classification Term
+      link_title: Link to classification term
 
   preference: &preference_attributes
     defaults: Defaults
     global: Global Preference Defaults
     global_message: Edit these values to set system-wide user preference defaults. These values can be overridden by repository defaults or a user's own preferences.
     repo: Repository Preferences
-    repo_message: Edit these values to set preferences for the current repository. These values can be overridden by a user's own preferences.
+    repo_message: Edit these values to set preferences for all users in the current repository. These values can be overridden by a user's own preferences.
     user_global: Global Preferences
     user_global_message: Edit these values to set your user preferences. These values can be overridden by repository defaults or by your own preferences for a repository.
     user_repo: User Preferences
@@ -2329,6 +2386,7 @@ en:
     publish_tooltip: Whether to publish new records by default.
     default_values: Pre-populate Records?
     default_values_tooltip: Whether to pre-populate new Accession and Resource records with default values.
+    digital_object_spawn: Spawn description for Digital Object instances from linked record
     browse_column: Column %{num}
     browse_column_tooltip: The field to show in column %{num}.
     sort_column: Default Sort Column
@@ -2369,6 +2427,8 @@ en:
       locations: Locations
       scope_by_date: Scope by Date
       template: Template
+      rating: Rating
+      values: Values
     formats:
       json: JSON
       csv: CSV
@@ -2381,6 +2441,7 @@ en:
     subject_must_be_unique: Subject records cannot be identical
     subject_heading_identifier_must_be_unique_within_source: Subject heading identifier must be unique within source
     missing_required_property: Property is required but was missing
+    missing_required_subrecord: Subrecord is required but was missing
     missing_property: Property was missing
     not_a_valid_date: Not a valid date
     must_not_be_before_begin: must not be before begin
@@ -2456,6 +2517,7 @@ en:
   job:
     _singular: Background Job
     _plural: Background Jobs
+    new_title: New Background Job
     job_type: Job Type
     types:
       print_to_pdf_job: Generate PDF
@@ -2470,12 +2532,14 @@ en:
       unknown_job_type: Unknown job type
       bulk_import_job: Load via Spreadsheet
       top_container_linker_job: Top Container Linker
+      ns2_remover_job: ns2 Namespace Remover
     status: Status
     status_completed: Completed
     status_queued: Queued
     status_running: Running
     status_failed: Failed
     status_canceled: Canceled
+    queue_position: "Nr. %{position}"
     time_submitted: Time Submitted
     time_started: Time Started
     time_finished: Time Completed
@@ -2495,16 +2559,19 @@ en:
   import_job:
     _singular: Import Job
     import_events: Import Maintenance Events?
+    import_subjects: Import and Link related Subjects?
     filenames: Files
     import_type: Import Type
     import_type_ead_xml: EAD
     import_type_assessment_csv: Assessment CSV
     import_type_accession_csv: Accession CSV
+    import_type_subject_csv: Subject CSV
     bulk_import_csv: Bulk Import AO CSV
     bulk_import_xlsx: Bulk Import AO XLSX
     bulk_import_DO_csv: Bulk Import DO CSV
     bulk_import_DO_xlsx: Bulk Import DO XLSX
     import_type_digital_object_csv: Digital Object CSV
+    import_subject_csv:  Subject CSV
     import_type_eac_xml: EAC-CPF
     import_type_location_csv: Location CSV
     import_type_marcxml: MarcXML Bibliographic (Resource)
@@ -2548,6 +2615,14 @@ en:
 
   trim_whitespace_job:
     description: Removes leading and trailing whitespace from titles for resources, accessions, digital objects, archival objects, and digital object components.
+
+  ns2_remover_job:
+      description: >
+        Archivists' Toolit-era EADs imported into ASpace may have vestigal "ns2" namespace references pre-pended to various EAD tag attributes inside note subrecords.
+        This may produce validation errors on EAD export from ArchivesSpace, as the root <ead> tag doesn't declare the "ns2" namespace.
+        This job bulk deletes "ns2" references within Notes subrecords attached to resource, archival_object, digital_object, and digital_object_component
+        records. As this job works across all repositories, it is restricted to users with <b>System Administrator permissions only</b>.
+      dry_run: Dry run?
 
   advanced_search:
     type:
@@ -2696,6 +2771,9 @@ en:
     rating_note: "%{label} Note"
     _singular: Assessment
     _plural: Assessments
+    new_title: New Assessment
+    linker:
+      link_title: Link to record
 
   assessment_attribute:
     rating:
@@ -2909,6 +2987,7 @@ en:
       dig_obj_unique: "Digital Object ID '%{id}' already exists."
       cannot: Cannot continue due to previous errors
       sc_barcode: "Can not find a Sub Container with this Child Barcode %{barcode}"
+      utf8: "This spreadsheet has some invalid or corrupt text that cannot be processed."
   top_container_linker:
     error:
       ref_id_miss: "Ref ID missing from spreadsheet in row %{row_num} ."
@@ -3004,3 +3083,9 @@ en:
     ark_editor_errors:
       ark_collision: One of the ARKs provided is already in use.
       ark_format_error: One of the ARKs provided was not a valid ARK.
+
+  container_profile:
+    title: "%{name} [%{depth}d, %{height}h, %{width}w %{dimension_units}] extent measured by %{extent_dimension}"
+    new_title: New Container Profile
+  location_profile:
+    new_title: New Location Profile
