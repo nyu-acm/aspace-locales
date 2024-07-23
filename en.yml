@@ -2249,6 +2249,7 @@ en:
     admin: Administrator
     _singular: User
     _plural: Users
+    reset_password: Reset Password
 
   collection_management: &collection_management_attributes
     cataloged_note: Cataloged Note
