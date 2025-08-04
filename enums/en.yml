@@ -203,6 +203,7 @@ en:
       box: Box
       carton: Carton
       case: Case
+      container: Container
       cd: CD
       Digital_Betacam: Digital Betacam
       E-records: Electronic Records
@@ -498,6 +499,7 @@ en:
     date_era:
       ce: ce
     date_label:
+      acquisition: Acquisition
       agent_relation: Agent Relation
       broadcast: Broadcast
       copyright: Copyright
@@ -2049,6 +2051,7 @@ en:
       tgn: Getty Thesaurus of Geographic Names
       unescot: UNESCO Thesaurus
       wikidata: Wikidata
+      zst: Zine Subject Thesaurus
     subject_term_type:
       cultural_context: Cultural context
       function: Function
